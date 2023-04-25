@@ -9,17 +9,14 @@ public class Util {
     public static final String USERNAME = "root";
     public static final String PASSWORD = "root1234";
 
-    Connection connection;
+    private static Connection connection;
 
-    public Connection getConnection() {
-        return connection;
-    }
-
-    public Util () {
+    public static Connection getConnection() {
         try {
-            Connection connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
+            connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
+        return connection;
     }
 }
