@@ -19,7 +19,7 @@ public class Util {
         try {
             Connection connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
