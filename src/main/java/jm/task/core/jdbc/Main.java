@@ -11,6 +11,7 @@ public class Main {
         usi.saveUser("Erik", "Shaydulin", (byte) 31);
         usi.saveUser("Elena", "Petrova", (byte) 19);
         System.out.println(usi.getAllUsers());
+        System.out.println("Теперь будем решать через Hibernate");
         usi.cleanUsersTable();
         usi.dropUsersTable();
 
